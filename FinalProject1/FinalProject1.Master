@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FinalProject1.master.cs" Inherits="FinalProject1.FinalProject1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <header role="banner">
+        <img src="Images/fin_055.jpg" alt="Banner Image" />
+        <h1>Final Project</h1>
+    </header>
+    <form id="form1" runat="server">
+        <div>
+            <div class="leftCol">
+
+                <asp:Menu ID="Menu1" runat="server">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                        <asp:MenuItem Text="About" Value="About"></asp:MenuItem>
+                        <asp:MenuItem Text="Work" Value="Work"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact" Value="Contact"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+        </div>
+    </form>
+    <footer>
+        <label>(c) your name | <% DateTime.Now.Year.ToString(); %> - current year</label>
+    </footer>
+</body>
+</html>
